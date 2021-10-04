@@ -4,7 +4,7 @@ import './Profile.css';
 class Profile extends Component {
     constructor(props) {
         super(props);
-        console.log(props);
+        console.log('props:', props);
     }
     render() {
         return (
@@ -13,13 +13,9 @@ class Profile extends Component {
                     <div className="profile-info">
                         <div className="profile-avatar">
                             { 
-                                this.props.currentUser.imageUrl ? (
-                                    <img src={this.props.currentUser.imageUrl} alt={this.props.currentUser.name}/>
-                                ) : (
                                     <div className="text-avatar">
-                                        <span>{this.props.currentUser.name && this.props.currentUser.name[0]}</span>
+                                        <span>{this.props.currentUser.nickname}</span>
                                     </div>
-                                )
                             }
                         </div>
                         <div className="profile-name">
